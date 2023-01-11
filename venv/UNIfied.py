@@ -1,0 +1,40 @@
+import teacher
+
+
+     # group1 = [111]
+     # group2 = [112]
+     # english = [156]
+     # ethics = [150]
+     # group1_id = [202201, 202202, 202203, 202204, 202205]
+     # group2_id = [202206, 202207, 202208, 202209, 202210]
+     # pw = [999]
+
+
+def student_teacher():
+    t= ['t','T']
+    s= ['s','S']
+    s_t=input('If you are a teaher press (t) ,If you are a student press (s):')
+    while s_t not in t and s_t not in s:
+        s_t = input('Please enter a valid answer:')
+    if s_t in t:
+        teacher.teacher_check()  #teacher portal
+    elif s_t in s:
+        return "student" #student portal
+
+
+
+
+
+
+
+
+if __name__ == "__main__":
+    student_teacher()
+    file = open("file156.txt", 'r')
+    for line in file:
+        print(line)
+    file.close()
+    file2 = open('file150.txt', 'r')
+    for line2 in file2:
+        print(line2)
+    file2.close()

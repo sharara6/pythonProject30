@@ -1,0 +1,228 @@
+import json  # json is a function to allow dictionaries to be written in files
+
+
+def teacher():
+    group1 = [111]
+    group2 = [112]
+    english = [156]
+    ethics = [150]
+    finish = 'y'
+    while finish == 'y':
+
+                id = int(input('Enter course ID:'))
+
+                while id not in ethics and id not in english:
+                    id = int(input('Error! enter correct course id:'))
+
+                if id in english:
+                    group = int(input('Group number:'))
+
+                    while group not in group1 and group not in group2:
+                        group = int(input('Error! Enter correct group:'))
+
+                    if group in group1:
+                        id_grade_156_1()
+
+                    elif group in group2:
+                        id_grade_156_2()
+
+                elif id in ethics:
+                    group = int(input('Group number:'))
+
+                    while group not in group1 and group not in group2:
+                        group = int(input('Error! Enter correct group:'))
+
+                    if group in group1:
+                        id_grade_150_1()
+
+                    elif group in group2:
+                        id_grade_150_2()
+
+                finish = input("Do you want to add other grades ? '(y) for yes (n) for no':")
+
+    return
+
+
+
+def id_grade_156_1():
+    group1_id = [202201, 202202, 202203, 202204, 202205]
+    i = 5
+    id_student1 = {}
+    abs_student1={}
+    while i > 0:
+
+        stu_id1 = (int(input('Enter student Id:')))
+
+        while stu_id1 not in group1_id:
+            stu_id1 = int(input('Error! please enter correct ID:'))
+        stu_grade1 = (int(input('Enter grade of student:')))
+
+        while stu_grade1 > 100 or stu_grade1 < 0:
+            stu_grade1 = (int(input('Error!please enter correct grades:')))
+        id_student1[stu_id1] = stu_grade1
+        i -= 1
+        abs_student1[stu_id1] = absence()
+        if i >= 1:
+            cont = input("if you finished this group please press (y) or (n) if not finished:")
+
+        if cont == 'y':
+            break
+
+    file = open('file156(g).txt', 'w')
+    # ('Group (1) English grades: ')
+    file.write(json.dumps(id_student1))
+    # json.dumps is a function to allow dictionaries to be written in files
+    file.write('\n')
+    file.close()
+    # file.write('group (1) absence days in English:')
+    file1=open('file156(a).txt','w')
+    file1.write(json.dumps(abs_student1))
+    file1.write('\n')
+    file1.close()
+    return file,file1
+
+
+
+
+
+
+def id_grade_156_2():
+    group2_id=[202206,202207,202208,202209,202210]
+    i=5
+    id_student2 = {}
+    abs_student2 = {}
+    while i > 0:
+        stu_id2 = (int(input('Enter student Id:')))
+        while stu_id2 not in group2_id:
+            stu_id2 = int(input('Error! please enter correct ID:'))
+        stu_grade2 = (int(input('Enter grade of student:')))
+
+        while stu_grade2 > 100 or stu_grade2 < 0:
+            stu_grade2 = (int(input('Error!please enter correct grades:')))
+        id_student2[stu_id2] = stu_grade2
+        abs_student2[stu_id2] = absence()
+        i -= 1
+
+        if i >= 1:
+            cont = input("if you finished this group please press (y) or (n) if not finished:")
+
+        if cont == 'y':
+            break
+
+    file2 = open('file156(g2).txt', 'w')
+   # ('Group (2) English grades: ')
+    file2.write(json.dumps(id_student2))
+    # json.dumps is a function to allow dictionaries to be written in files
+    file2.write('\n')
+    file2.close()
+   # ('group (2) absence days in English:')
+    fie3=open('file156(a2).txt',"w")
+    file3.write(json.dumps(abs_student2))
+    file3.write('\n')
+    file3.close()
+    return file2,file3
+
+
+
+def id_grade_150_1():
+    group1_id = [202201, 202202, 202203, 202204, 202205]
+    i = 5
+    id_student1 = {}
+    abs_student1 = {}
+    while i > 0:
+        stu_id1 = (int(input('Enter student Id:')))
+
+        while stu_id1 not in group1_id:
+            stu_id1 = int(input('Error! please enter correct ID:'))
+
+        stu_grade1 = (int(input('Enter grade of student:')))
+        while stu_grade1 > 100 or stu_grade1 < 0:
+            stu_grade1 = (int(input('Error!please enter correct grades:')))
+
+        id_student1[stu_id1] = stu_grade1
+        abs_student1[stu_id1] = absence()
+        i -= 1
+
+        if i >= 1:
+            cont = input("if you finished this group please press (y) or (n) if not finished:")
+
+        if cont == 'y':
+            break
+
+    file4 = open('file150(g).txt', 'w')
+    #                   if written in here file will reset grades
+    #('Group (1) Ethics grades: ')
+    file4.write(json.dumps(id_student1))
+    # json.dumps is a function to allow dictionaries to be written in files
+    file4.write('\n')
+    file4.close()
+    #file.write('group (1) absence days in Ethics:')
+    file5=open('file150(a)','w')
+    file5.write(json.dumps(abs_student1))
+    file5.write('\n')
+    file5.close()
+    return file5,file4
+
+
+
+def id_grade_150_2():
+    group2_id = [202206, 202207, 202208, 202209, 202210]
+    i = 5
+    id_student2 = {}
+    abs_student2 = {}
+    while i > 0:
+        stu_id2 = (int(input('Enter student Id:')))
+
+        while stu_id2 not in group2_id:
+            stu_id2 = int(input('Error! please enter correct ID:'))
+        stu_grade2 = (int(input('Enter grade of student:')))
+
+        while stu_grade2 > 100 or stu_grade2 < 0:
+            stu_grade2 = (int(input('Error!please enter correct grades:')))
+        id_student2[stu_id2] = stu_grade2
+        i -= 1
+        abs_student2[stu_id2] = absence()
+
+        if i >= 1:
+            cont = input("if you finished this group please press (y) or (n) if not finished:")
+
+        if cont == 'y':
+            break
+
+    file6 = open('file150(g2).txt', 'w')
+    #('Group (2) Ethics grades: ')
+    file6.write(json.dumps(id_student2))
+    # json.dumps is a function to allow dictionaries to be written in files
+    file6.write('\n')
+    file6.close()
+    #('group (2) absence days in Ethics:')
+    file7 = open('file150(a2).txt','w')
+    file7.write(json.dumps(abs_student2))
+    file7.write('\n')
+    file7.close()
+    return file7,file6
+
+
+
+
+def absence():
+    abs=(int(input('Enter absence days:')))
+    while abs < 0:
+        abs=int(input('Erorr! PLease enter correct absence days:'))
+    return abs
+
+
+
+
+
+
+if __name__ == "__main__":
+    teacher()
+    file = open("file156.txt", 'r')
+    for line in file:
+        print(line)
+    file.close()
+    file2 = open('file150.txt', 'r')
+    for line2 in file2:
+        print(line2)
+    file2.close()

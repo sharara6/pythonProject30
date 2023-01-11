@@ -19,11 +19,10 @@ def Financial_grades(student_id):
                 check_GPA(Student_GPA)
                 Rank(student_id)
                 cont=input("do you want to exit the program?(y/n):")
-def GPA_calculator(g1,g2,g3,student_id):
-    Mgrade=g1[student_id]
-    Egrade=g2[student_id]
-    CSgrade=g3[student_id]
-    Student_GPA=((Mgrade+Egrade+CSgrade)/300)*4
+def GPA_calculator(g1,g2,,student_id):
+    Ethics_grade=g1[student_id]
+    English_grade=g2[student_id]
+    Student_GPA=((Ethics_grade+English_grade)/200)*4
     return Student_GPA
 def check_GPA(o):
     if o < 2.2 :

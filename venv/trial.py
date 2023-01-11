@@ -83,21 +83,32 @@ def id_grade_156_1():
             while True:
                 try:
                     stu_id1 = int(input('Error! please enter correct ID:'))
+                    break
                 except:
-                    print('Error')
-        while:
-            stu_g
-            rade1 = (int(input('Enter grade of student:')))
-
-
+                    print('Error only enter numbers')
+        while True:
+            try:
+                stu_grade1 = (int(input('Enter grade of student:')))
+                break
+            except:
+                print('Error enter numbers only')
         while stu_grade1 > 100 or stu_grade1 < 0:
-            stu_grade1 = (int(input('Error!please enter correct grades:')))
+            while True:
+                try:
+                    stu_grade1 = (int(input('Error!please enter correct grades:')))
+                    break
+                except:
+                    print('Error enter numbers only')
         id_student1[stu_id1] = stu_grade1
         i -= 1
         abs_student1[stu_id1] = absence()
         if i >= 1:
-            cont = input("if you finished this group please press (y) or (n) if not finished:")
-
+            while True:
+                try:
+                    cont = input("if you finished this group please press (y) or (n) if not finished:")
+                    break
+                except:
+                    print('Error enter letters only')
         if cont == 'y':
             break
 
@@ -125,19 +136,43 @@ def id_grade_156_2():
     id_student2 = {}
     abs_student2 = {}
     while i > 0:
-        stu_id2 = (int(input('Enter student Id:')))
+        while True:
+            try:
+                stu_id2 = (int(input('Enter student Id:')))
+                break
+            except:
+                print('Error enter numbers only')
         while stu_id2 not in group2_id:
-            stu_id2 = int(input('Error! please enter correct ID:'))
-        stu_grade2 = (int(input('Enter grade of student:')))
-
+            while True:
+                try:
+                    stu_id2 = int(input('Error! please enter correct ID:'))
+                    break
+                except:
+                    print('Error enter numbers only')
+        while True:
+            try:
+                stu_grade2 = (int(input('Enter grade of student:')))
+                break
+            except:
+                print('Error enter numbers only')
         while stu_grade2 > 100 or stu_grade2 < 0:
-            stu_grade2 = (int(input('Error!please enter correct grades:')))
+            while True:
+                try:
+                    stu_grade2 = (int(input('Error!please enter correct grades:')))
+                    break
+                except:
+                    print('Error enter numbers only')
         id_student2[stu_id2] = stu_grade2
         abs_student2[stu_id2] = absence()
         i -= 1
 
         if i >= 1:
-            cont = input("if you finished this group please press (y) or (n) if not finished:")
+            while True:
+                try:
+                    cont = input("if you finished this group please press (y) or (n) if not finished:")
+                    break
+                except:
+                    print('Error enter letters only')
 
         if cont == 'y':
             break
@@ -163,21 +198,43 @@ def id_grade_150_1():
     id_student1 = {}
     abs_student1 = {}
     while i > 0:
-        stu_id1 = (int(input('Enter student Id:')))
-
+        while True:
+            try:
+                stu_id1 = (int(input('Enter student Id:')))
+                break
+            except:
+                print('Error enter numbers only')
         while stu_id1 not in group1_id:
-            stu_id1 = int(input('Error! please enter correct ID:'))
-
-        stu_grade1 = (int(input('Enter grade of student:')))
+            while True:
+                try:
+                    stu_id1 = int(input('Error! please enter correct ID:'))
+                    break
+                except:
+                    print('Error enter numbers only')
+        while True:
+            try:
+                stu_grade1 = (int(input('Enter grade of student:')))
+                break
+            except:
+                print('Error enter numbers only')
         while stu_grade1 > 100 or stu_grade1 < 0:
-            stu_grade1 = (int(input('Error!please enter correct grades:')))
-
+            while True:
+                try:
+                    stu_grade1 = (int(input('Error!please enter correct grades:')))
+                    break
+                except:
+                    print('Error enter numbers only')
         id_student1[stu_id1] = stu_grade1
         abs_student1[stu_id1] = absence()
         i -= 1
 
         if i >= 1:
-            cont = input("if you finished this group please press (y) or (n) if not finished:")
+            while True:
+                try:
+                    cont = input("if you finished this group please press (y) or (n) if not finished:")
+                    break
+                except:
+                    print('Error enter letter only')
 
         if cont == 'y':
             break
@@ -204,20 +261,45 @@ def id_grade_150_2():
     id_student2 = {}
     abs_student2 = {}
     while i > 0:
-        stu_id2 = (int(input('Enter student Id:')))
+        while True:
+            try:
+                stu_id2 = (int(input('Enter student Id:')))
+                break
+            except:
+                print('Error enter numbers only')
 
         while stu_id2 not in group2_id:
-            stu_id2 = int(input('Error! please enter correct ID:'))
-        stu_grade2 = (int(input('Enter grade of student:')))
+            while True:
+                try:
+                    stu_id2 = int(input('Error! please enter correct ID:'))
+                    break
+                except:
+                    print('Error enter numbers only')
+        while True:
+            try:
+                stu_grade2 = (int(input('Enter grade of student:')))
+                break
+            except:
+                print('Error enter numbers only')
 
         while stu_grade2 > 100 or stu_grade2 < 0:
-            stu_grade2 = (int(input('Error!please enter correct grades:')))
+            while True:
+                try:
+                    stu_grade2 = (int(input('Error!please enter correct grades:')))
+                    break
+                except:
+                    print('Error enter numbers only')
         id_student2[stu_id2] = stu_grade2
         i -= 1
         abs_student2[stu_id2] = absence()
 
         if i >= 1:
-            cont = input("if you finished this group please press (y) or (n) if not finished:")
+            while True:
+                try:
+                    cont = input("if you finished this group please press (y) or (n) if not finished:")
+                    break
+                except:
+                    print('Error enter numbers only')
 
         if cont == 'y':
             break
@@ -240,8 +322,13 @@ def id_grade_150_2():
 
 def absence():
     abs=(int(input('Enter absence days:')))
-    while abs < 0:
-        abs=int(input('Erorr! PLease enter correct absence days:'))
+    while abs < 0 or abs < 15:
+        while True:
+            try:
+                abs = int(input('Erorr! PLease enter correct absence days:'))
+                break
+            except:
+                print('Error enter numbers only')
     return abs
 
 

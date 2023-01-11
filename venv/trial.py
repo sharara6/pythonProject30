@@ -8,37 +8,59 @@ def teacher():
     ethics = [150]
     finish = 'y'
     while finish == 'y':
+                while True:
+                    try:
+                        id = int(input('Enter course ID:'))
+                        break
+                        while id not in ethics and id not in english:
+                                id = int(input('Error! enter correct course id:'))
+                    except:
+                        print('Eror!only numbers are allowed ')
 
-                id = int(input('Enter course ID:'))
 
-                while id not in ethics and id not in english:
-                    id = int(input('Error! enter correct course id:'))
 
                 if id in english:
-                    group = int(input('Group number:'))
+                    while True:
+                        try:
+                            group = int(input('Group number:'))
+                            break
 
-                    while group not in group1 and group not in group2:
-                        group = int(input('Error! Enter correct group:'))
+                            while group not in group1 and group not in group2:
+                                while True:
+                                    try:
+                                        group = int(input('Error! Enter correct group:'))
+                                        break
+                                    except:
+                                        print('Error only numbers are allowed')
+                            if group in group1:
+                                id_grade_156_1()
 
-                    if group in group1:
-                        id_grade_156_1()
-
-                    elif group in group2:
-                        id_grade_156_2()
+                            elif group in group2:
+                                id_grade_156_2()
+                        except:
+                            print('Error only numbers are allowed')
 
                 elif id in ethics:
-                    group = int(input('Group number:'))
+                    while True:
+                        try:
+                            group = int(input('Group number:'))
+                            break
+                            while group not in group1 and group not in group2:
+                                group = int(input('Error! Enter correct group:'))
 
-                    while group not in group1 and group not in group2:
-                        group = int(input('Error! Enter correct group:'))
+                            if group in group1:
+                                id_grade_150_1()
 
-                    if group in group1:
-                        id_grade_150_1()
-
-                    elif group in group2:
-                        id_grade_150_2()
-
-                finish = input("Do you want to add other grades ? '(y) for yes (n) for no':")
+                            elif group in group2:
+                                id_grade_150_2()
+                        except:
+                            print('Error only numbers are allowed')
+                while True:
+                    try:
+                        finish = input("Do you want to add other grades ? '(y) for yes (n) for no':")
+                        break
+                    except:
+                        print('Error only enter letters')
 
     return
 
@@ -50,12 +72,23 @@ def id_grade_156_1():
     id_student1 = {}
     abs_student1={}
     while i > 0:
-
-        stu_id1 = (int(input('Enter student Id:')))
+        while True :
+            try:
+                stu_id1 = (int(input('Enter student Id:')))
+                break
+            except:
+                print('Error only numbers are allowed')
 
         while stu_id1 not in group1_id:
-            stu_id1 = int(input('Error! please enter correct ID:'))
-        stu_grade1 = (int(input('Enter grade of student:')))
+            while True:
+                try:
+                    stu_id1 = int(input('Error! please enter correct ID:'))
+                except:
+                    print('Error')
+        while:
+            stu_g
+            rade1 = (int(input('Enter grade of student:')))
+
 
         while stu_grade1 > 100 or stu_grade1 < 0:
             stu_grade1 = (int(input('Error!please enter correct grades:')))
@@ -157,7 +190,7 @@ def id_grade_150_1():
     file4.write('\n')
     file4.close()
     #file.write('group (1) absence days in Ethics:')
-    file5=open('file150(a)','w')
+    file5=open('file150(a).txt','w')
     file5.write(json.dumps(abs_student1))
     file5.write('\n')
     file5.close()

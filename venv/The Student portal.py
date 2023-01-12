@@ -1,4 +1,4 @@
-student_id = int(input("enter student id:"))
+#student_id = int(input("enter student id:"))
 def get_English_grades(student_id):
     import json
     group1_id = [202201, 202202, 202203, 202204, 202205]
@@ -93,6 +93,17 @@ def scholarship(student_id):
         print ("Congratulations you are applicable to a 75% scholarship, please head to the finance office to register for it")
     if P > 3.9:
         print ("Congratulations you are applicable to a 100% scholarship, please head to the finance office to register for it")
+def Student_portal():
+    group1_id = [202201, 202202, 202203, 202204, 202205]
+    group2_id = [202206, 202207, 202208, 202209, 202210]
+    student_id=int(input("Enter your student id here:"))
+    while student_id not in group1_id and student_id not in group2_id:
+        student_id=int(input("Please enter a correct id:"))
+
+
+
+
+
 #absence_warning(student_id)
 # print(Ethicgrades)
 # print(Englishgrades)
@@ -126,3 +137,5 @@ def scholarship(student_id):
 # print(get_English_absence(student_id))
 # print(get_English_grades(student_id))
 # print(get_Ethics_grades(student_id))
+#scholarship(student_id)
+Student_portal()

@@ -127,4 +127,4 @@ def Student_portal():#this function runs the entire student portal
     while student_id not in group1_id and student_id not in group2_id:
         student_id=int(input("Please enter a correct id:"))
     Financial_Grades(student_id)
-Student_portal()
+

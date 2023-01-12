@@ -128,3 +128,5 @@ def Student_portal():#this function runs the entire student portal
         student_id=int(input("Please enter a correct id:"))
     Financial_Grades(student_id)
 
+if __name__ == "__main__":
+    Student_portal()

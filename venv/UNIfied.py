@@ -16,12 +16,14 @@ def student_teacher():
     while True:
         try:
             s_t = input('If you are a teaher press (t) ,If you are a student press (s):')
+            break
         except:
             print('only liters are allowed')
     while s_t not in t and s_t not in s:
         while True:
             try:
                 s_t = input('Please enter a valid answer:')
+                break
             except:
                 print('only liters are allowed')
 

@@ -13,9 +13,20 @@ import teacher
 def student_teacher():
     t= ['t','T']
     s= ['s','S']
-    s_t=input('If you are a teaher press (t) ,If you are a student press (s):')
+    while True:
+        try:
+            s_t = input('If you are a teaher press (t) ,If you are a student press (s):')
+            break
+        except:
+            print('only liters are allowed')
     while s_t not in t and s_t not in s:
-        s_t = input('Please enter a valid answer:')
+        while True:
+            try:
+                s_t = input('Please enter a valid answer:')
+                break
+            except:
+                print('only liters are allowed')
+
     if s_t in t:
         teacher.teacher_check()  #teacher portal
     elif s_t in s:

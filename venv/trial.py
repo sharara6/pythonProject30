@@ -57,7 +57,8 @@ def teacher():
                             print('Error only numbers are allowed')
                 while True:
                     try:
-                        finish = input("Do you want to add other grades ? '(y) for yes (n) for no':")
+                        finish = input("Do you want to add other grades for other groups or subjects ? '(y) for yes or any button for (no):")
+
                         break
                     except:
                         print('Error only enter letters')
@@ -105,7 +106,7 @@ def id_grade_156_1():
         if i >= 1:
             while True:
                 try:
-                    cont = input("if you finished this group please press (y) or (n) if not finished:")
+                    cont = input("if you are done adding grades enter (y)if not press any button :")
                     break
                 except:
                     print('Error enter letters only')
@@ -169,7 +170,7 @@ def id_grade_156_2():
         if i >= 1:
             while True:
                 try:
-                    cont = input("if you finished this group please press (y) or (n) if not finished:")
+                    cont = input("if you are done adding grades enter (y)if not press any button ")
                     break
                 except:
                     print('Error enter letters only')
@@ -231,7 +232,7 @@ def id_grade_150_1():
         if i >= 1:
             while True:
                 try:
-                    cont = input("if you finished this group please press (y) or (n) if not finished:")
+                    cont = input("if you are done adding grades enter (y)if not press any button  :")
                     break
                 except:
                     print('Error enter letter only')
@@ -296,7 +297,7 @@ def id_grade_150_2():
         if i >= 1:
             while True:
                 try:
-                    cont = input("if you finished this group please press (y) or (n) if not finished:")
+                    cont = input("if you are done adding grades enter (y)if not press any button :")
                     break
                 except:
                     print('Error enter numbers only')

@@ -1,5 +1,5 @@
 def get_grade_and_absence_dicts():
-    
+student_id
 def Financial_grades(student_id):
     cont="n"
     g=["G","g"]
@@ -60,3 +60,4 @@ def Rank(student_id):
             if section3_grades[student_id]== sectionl[i]:
                 student_id2=student_id+"'s"
                 print("student",student_id2,"section rank is",(i+1))
+Financial_grades(student_id)

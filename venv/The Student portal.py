@@ -99,6 +99,16 @@ def Student_portal():
     student_id=int(input("Enter your student id here:"))
     while student_id not in group1_id and student_id not in group2_id:
         student_id=int(input("Please enter a correct id:"))
+def Financial_Grades():
+    cont = "n"
+    g = ["G", "g"]
+    f = ["F", "f"]
+    y = ["y", "Y"]
+    n = ["n", "N"]
+    while cont == "n" or cont == "N":
+        x = input("would you like to look at your Financials or your GPA? (F/G?):")
+        while x not in g and x not in f:
+            x = input("Please enter a valid answer:")
 
 
 

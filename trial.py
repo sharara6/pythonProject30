@@ -1,7 +1,7 @@
 import json  # json is a function to allow dictionaries to be written in files
 
 
-def teacher():
+def teacher():#This function takes the course id from the teacher then takes this course students' grades
     group1 = [111]
     group2 = [112]
     english = [156]
@@ -66,7 +66,7 @@ def teacher():
 
 
 
-def id_grade_156_1():
+def id_grade_156_1():#This function takes the group 1 English grades from the teacher and inputs it into a file
     group1_id = [202201, 202202, 202203, 202204, 202205]
     i = 5
     id_student1 = {}
@@ -130,7 +130,7 @@ def id_grade_156_1():
 
 
 
-def id_grade_156_2():
+def id_grade_156_2():#This function takes the group 2 English grades from the teacher and inputs it into a file
     group2_id=[202206,202207,202208,202209,202210]
     i=5
     id_student2 = {}
@@ -192,7 +192,7 @@ def id_grade_156_2():
 
 
 
-def id_grade_150_1():
+def id_grade_150_1():#This function takes the group 1 Ethics grades from the teacher and inputs it into a file
     group1_id = [202201, 202202, 202203, 202204, 202205]
     i = 5
     id_student1 = {}
@@ -255,7 +255,7 @@ def id_grade_150_1():
 
 
 
-def id_grade_150_2():
+def id_grade_150_2():#This function takes the group 2 Ethics grades from the teacher and inputs it into a file
     group2_id = [202206, 202207, 202208, 202209, 202210]
     i = 5
     id_student2 = {}
@@ -320,12 +320,12 @@ def id_grade_150_2():
 
 
 
-def absence():
+def absence():#This function takes the grabsence days from the teacher and inputs it into a file
     abs=(int(input('Enter absence days:')))
     while abs < 0 or abs < 15:
         while True:
             try:
-                abs = int(input('Erorr! PLease enter correct absence days:'))
+                abs = int(input('Error! PLease enter correct absence days:'))
                 break
             except:
                 print('Error enter numbers only')

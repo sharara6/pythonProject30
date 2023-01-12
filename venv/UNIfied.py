@@ -25,7 +25,6 @@ def student_teacher():
                 break
             except:
                 print('only liters are allowed')
-
     if s_t in t:
         teacher.teacher_check()  #teacher portal
     elif s_t in s:
@@ -38,13 +37,13 @@ def student_teacher():
 
 
 
-if __name__ == "__main__":
-    student_teacher()
-    file = open("file156.txt", 'r')
-    for line in file:
-        print(line)
-    file.close()
-    file2 = open('file150.txt', 'r')
-    for line2 in file2:
-        print(line2)
-    file2.close()
+# if __name__ == "__main__":
+#     student_teacher()
+#     file = open("file156.txt", 'r')
+#     for line in file:
+#         print(line)
+#     file.close()
+#     file2 = open('file150.txt', 'r')
+#     for line2 in file2:
+#         print(line2)
+#     file2.close()

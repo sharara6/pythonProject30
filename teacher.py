@@ -10,7 +10,7 @@ def teacher_check():
                 trial.teacher()
                 break
             while p not in pw:
-                p = int(input('Error!Please enter a valid password:'))
+                p = int(input('Error!Please enter a valid password twice:'))
         except:
             print('Error! only numbers are allowed')
 

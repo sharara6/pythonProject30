@@ -57,7 +57,7 @@ def teacher():#This function takes the course id from the teacher then takes thi
                             print('Error only numbers are allowed')
                 while True:
                     try:
-                        finish = input("Do you want to add other grades ? '(y) for yes (n) for no':")
+                        finish = input("Do you want to add other grades ? '(y) to continue:")
                         break
                     except:
                         print('Error only enter letters')
@@ -105,7 +105,7 @@ def id_grade_156_1():#This function takes the group 1 English grades from the te
         if i >= 1:
             while True:
                 try:
-                    cont = input("if you finished this group please press (y) or (n) if not finished:")
+                    cont = input("if you finished this group please press (y) to continue:")
                     break
                 except:
                     print('Error enter letters only')

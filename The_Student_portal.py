@@ -105,7 +105,7 @@ def Financial_Grades(student_id):#this function lets the student choose if he wa
                 print('Please enter letters')
     if f_g in f:
         scholarship(student_id)
-        restart=input("do you wish to restart?(y/n)")
+        restart=input("do you wish to restart? (enter y for yes)")
         if restart == "y":
             Financial_Grades(student_id)
         elif restart== "n":
@@ -115,7 +115,7 @@ def Financial_Grades(student_id):#this function lets the student choose if he wa
         print("your GPA=",student_GPA)
         check_GPA(student_GPA)
         absence_warning(student_id)
-        restart = input("do you wish to restart?(y/n)")
+        restart = input("do you wish to restart? (enter y for yes)")
         if restart == "y":
             Financial_Grades(student_id)
         elif restart == "n":
@@ -128,5 +128,3 @@ def Student_portal():#this function runs the entire student portal
         student_id=int(input("Please enter a correct id:"))
     Financial_Grades(student_id)
 
-if __name__ == "__main__":
-    Student_portal()

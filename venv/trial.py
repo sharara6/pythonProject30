@@ -11,9 +11,9 @@ def teacher():
                 while True:
                     try:
                         id = int(input('Enter course ID:'))
-                        break
                         while id not in ethics and id not in english:
                                 id = int(input('Error! enter correct course id:'))
+                        break
                     except:
                         print('Eror!only numbers are allowed ')
 
@@ -23,7 +23,6 @@ def teacher():
                     while True:
                         try:
                             group = int(input('Group number:'))
-                            break
 
                             while group not in group1 and group not in group2:
                                 while True:
@@ -37,6 +36,7 @@ def teacher():
 
                             elif group in group2:
                                 id_grade_156_2()
+                            break
                         except:
                             print('Error only numbers are allowed')
 
@@ -44,7 +44,6 @@ def teacher():
                     while True:
                         try:
                             group = int(input('Group number:'))
-                            break
                             while group not in group1 and group not in group2:
                                 group = int(input('Error! Enter correct group:'))
 
@@ -53,6 +52,7 @@ def teacher():
 
                             elif group in group2:
                                 id_grade_150_2()
+                            break
                         except:
                             print('Error only numbers are allowed')
                 while True:
@@ -240,7 +240,7 @@ def id_grade_150_1():
             break
 
     file4 = open('file150(g).txt', 'w')
-    #                   if written in here file will reset grades
+    #                 if written in here file will reset grades
     #('Group (1) Ethics grades: ')
     file4.write(json.dumps(id_student1))
     # json.dumps is a function to allow dictionaries to be written in files
@@ -322,7 +322,7 @@ def id_grade_150_2():
 
 def absence():
     abs=(int(input('Enter absence days:')))
-    while abs < 0 or abs < 15:
+    while abs < 0 or abs > 15:
         while True:
             try:
                 abs = int(input('Erorr! PLease enter correct absence days:'))

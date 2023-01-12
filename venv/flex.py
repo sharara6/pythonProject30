@@ -1,0 +1,2 @@
+import The_student_portal
+The_student_portal.Student_portal()

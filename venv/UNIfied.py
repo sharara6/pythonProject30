@@ -1,5 +1,5 @@
 import teacher
-
+import The_Student_Portal
 
      # group1 = [111]
      # group2 = [112]
@@ -30,7 +30,7 @@ def student_teacher():
     if s_t in t:
         teacher.teacher_check()  #teacher portal
     elif s_t in s:
-        return "student" #student portal
+        The_Student_Portal.Student_portal()
 
 
 
